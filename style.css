@@ -1,0 +1,157 @@
+/* Genel Ayarlar */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(45deg, #004D98, #FFCB05);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Konteyner Ayarları */
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Başlık */
+h1, h2 {
+  color: #004D98;
+  margin-bottom: 10px;
+}
+
+/* Açıklama */
+p {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+/* Giriş Alanı */
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #004D98;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Buton */
+button {
+  padding: 10px 20px;
+  background-color: #FFCB05;
+  color: #004D98;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #004D98;
+  color: #FFCB05;
+}
+
+/* Seçilen Buton */
+button.selected {
+  background-color: #004D98;
+  color: #FFCB05;
+  border: 2px solid #FFCB05;
+}
+
+/* Devam Et Butonu */
+#continue-btn {
+  margin-top: 20px;
+  background-color: #004D98;
+  color: #FFCB05;
+}
+button.trait-btn,
+button.guest-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.trait-btn.selected,
+button.guest-btn.selected {
+    background-color: #004D98;
+    color: #FFCB05;
+    border: 2px solid #FFCB05;
+}
+
+.player-image {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.player-image img {
+  max-width: 500px;  /* İstediğiniz boyuta göre ayarlayabilirsiniz */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Loading Animasyonu */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #FFCB05;
+  border-top: 5px solid #004D98;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.result-text {
+  color: #004D98;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-media-icons .icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-media-icons .icon:hover {
+  transform: scale(1.2);
+}
+.social-sharing a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Tam yuvarlak için 50% */
+  background-color: #f0f0f0; /* Arka plan rengi */
+  color: #333;
+  text-align: center;
+  line-height: 30px;
+  margin: 5px;
+}
+
