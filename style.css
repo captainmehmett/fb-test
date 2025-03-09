@@ -1,0 +1,178 @@
+body {
+    background: linear-gradient(135deg, #041e42, #fdb913);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.quiz-container {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 2rem;
+}
+
+.screen {
+    display: none;
+}
+
+.screen.active {
+    display: block;
+}
+
+.options-container {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.option-btn {
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.result-content {
+    margin: 2rem 0;
+}
+
+#player-image {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+#player-image:hover {
+    transform: scale(1.02);
+}
+
+.btn-primary, .download-btn {
+    background-color: #fdb913;
+    border-color: #fdb913;
+    color: #041e42;
+    font-weight: bold;
+    padding: 0.8rem 2rem;
+    width: 200px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.btn-primary:hover, .download-btn:hover {
+    background-color: #041e42;
+    border-color: #041e42;
+    color: #fdb913;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.welcome-text {
+    color: #041e42;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* Tıklama efekti için */
+.option-btn:active {
+    transform: scale(0.98);
+    transition: transform 0.1s;
+}
+
+/* Mobil için container padding'i azalt */
+@media (max-width: 768px) {
+    .quiz-container {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .option-btn {
+        padding: 0.8rem;
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+    }
+
+    #player-image {
+        max-width: 250px;
+        margin: 15px 0;
+    }
+
+    #player-description {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .welcome-text {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-primary, .download-btn {
+        width: 180px;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .download-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* Çok küçük ekranlar için ek düzenlemeler */
+@media (max-width: 320px) {
+    .quiz-container {
+        padding: 0.8rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    #player-image {
+        max-width: 200px;
+    }
+}
+
+.download-btn {
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.download-btn i {
+    font-size: 1.2em;
+}
+
