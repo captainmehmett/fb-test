@@ -5,7 +5,12 @@ const players = {
         style: 'agresif',
         strength: 'çeviklik',
         image: 'images/oosterwolde.png',
-        description: 'Sol bek ve stoper pozisyonlarında oynayan, agresif savunma anlayışı ve çevikliğiyle öne çıkan modern bir defans oyuncusun!'
+        description: 'Sol bek ve stoper pozisyonlarında oynayan, agresif savunma anlayışı ve çevikliğiyle öne çıkan modern bir defans oyuncusun!',
+        stats: {
+            matches: 28,
+            goals: 1,
+            assists: 2
+        }
     },
     'tadic': {
         name: 'Dusan Tadic',
@@ -13,7 +18,12 @@ const players = {
         style: 'sakin',
         strength: 'teknik',
         image: 'images/tadic.png',
-        description: 'Sahada teknik kapasiten ve sakin oyun kurman ile takımına liderlik eden bir oyuncusun!'
+        description: 'Sahada teknik kapasiten ve sakin oyun kurman ile takımına liderlik eden bir oyuncusun!',
+        stats: {
+            matches: 25,
+            goals: 10,
+            assists: 15
+        }
     },
     'szymanski': {
         name: 'Sebastian Szymanski',
@@ -53,6 +63,22 @@ function showResult() {
     
     document.getElementById('player-result').textContent = matchedPlayer.name;
     document.getElementById('player-description').textContent = matchedPlayer.description;
+    
+    // İstatistikleri ekleyelim
+    const statsDiv = document.createElement('div');
+    statsDiv.className = 'player-stats animate__animated animate__fadeIn';
+    statsDiv.innerHTML = `
+        <h4>Bu Sezon</h4>
+        <p class="stats-line">
+            📌 ${matchedPlayer.stats.matches} maç 
+            ⚽ ${matchedPlayer.stats.goals} gol 
+            🎯 ${matchedPlayer.stats.assists} asist
+        </p>
+    `;
+    
+    // İstatistikleri description ile result arasına ekleyelim
+    const resultContent = document.querySelector('.result-content');
+    resultContent.insertBefore(statsDiv, document.getElementById('player-description'));
     
     crowdSound.src = 'export.mp3';
     crowdSound.play();
