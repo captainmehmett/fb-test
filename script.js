@@ -4,7 +4,7 @@ const players = {
         position: 'stoper',
         style: 'agresif',
         strength: 'çeviklik',
-        image: 'images/oosterwolde.jpg',
+        image: 'images/oosterwolde.png',
         description: 'Sol bek ve stoper pozisyonlarında oynayan, agresif savunma anlayışı ve çevikliğiyle öne çıkan modern bir defans oyuncusun!'
     },
     'tadic': {
@@ -20,7 +20,7 @@ const players = {
         position: 'orta saha',
         style: 'teknik',
         strength: 'çeviklik',
-        image: 'szymanski.jpg',
+        image: 'images/szymanski.png',
         description: 'Orta sahada teknik kapasiten ve çevikliğinle fark yaratan bir oyuncusun!'
     },
     'dzeko': {
@@ -28,7 +28,7 @@ const players = {
         position: 'forvet',
         style: 'agresif',
         strength: 'güç',
-        image: 'dzeko.jpg',
+        image: 'images/dzeko.png',
         description: 'Ceza sahası içinde güçlü ve agresif oyun stilinle rakip savunmaların korkulu rüyasısın!'
     },
     'fred': {
@@ -36,7 +36,7 @@ const players = {
         position: 'orta saha',
         style: 'lider',
         strength: 'teknik',
-        image: 'fred.jpg',
+        image: 'images/fred.png',
         description: 'Orta sahada liderlik vasfın ve teknik kapasiten ile takımının beyni gibisin!'
     }
 };
